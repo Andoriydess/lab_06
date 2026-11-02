@@ -9,12 +9,26 @@ class SignUpScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [ SizedBox(
+          children: [
+            SizedBox(
+              child: Image.asset("assets/images/img2.png", height: 192, width: 192,),
+            ),
+            SizedBox(
+              width: 300,
+              child: TextField(
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'name',
+                ),
+              ),
+            ),
+            SizedBox(height: 20,),
+            SizedBox(
             width: 300,
             child: TextField(
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Enter email',
+                hintText: 'email',
               ),
             ),
           ),
@@ -24,7 +38,7 @@ class SignUpScreen extends StatelessWidget {
               child: TextField(
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'Enter password',
+                  hintText: 'password',
                 ),
               ),
             ),
@@ -33,6 +47,7 @@ class SignUpScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
             ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey,foregroundColor: Colors.white),
               onPressed: () => {
                 showDialog(
                   context: context,
@@ -45,7 +60,7 @@ class SignUpScreen extends StatelessWidget {
                 )
               },
               child: const Text("Sign Up"),
-            ), //Sign Up
+            ),
             SizedBox(width:20),
             OutlinedButton(
               onPressed: () => {
