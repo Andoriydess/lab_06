@@ -16,30 +16,21 @@ class SignUpScreen extends StatelessWidget {
             SizedBox(
               width: 300,
               child: TextField(
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'name',
-                ),
+                decoration: const InputDecoration(hintText: 'name',),
               ),
             ),
             SizedBox(height: 20,),
             SizedBox(
             width: 300,
             child: TextField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'email',
-              ),
+              decoration: const InputDecoration(hintText: 'email',),
             ),
           ),
             SizedBox(height: 20,),
             SizedBox(
               width: 300,
               child: TextField(
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'password',
-                ),
+                decoration: const InputDecoration(hintText: 'password',),
               ),
             ),
             SizedBox(height: 20,),
@@ -47,7 +38,6 @@ class SignUpScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey,foregroundColor: Colors.white),
               onPressed: () => {
                 showDialog(
                   context: context,

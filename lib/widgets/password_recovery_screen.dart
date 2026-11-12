@@ -16,17 +16,21 @@ class PasswordRecoveryScreen extends StatelessWidget {
             SizedBox(
               width: 300,
             child: TextField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'email',
-              ),
+              decoration: const InputDecoration(hintText: 'email',),
             ),
             ),
             SizedBox(height: 20,),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey,foregroundColor: Colors.white),
               onPressed: () => {
-                Navigator.pop(context)
+                showDialog(
+                  context: context,
+                  builder: (BuildContext ctx) {
+                    return const AlertDialog(
+                      title: Text("title"),
+                      content: Text("sbtitle"),
+                    );
+                  }
+                )
               },
               child: const Text("Reset"),
             ),

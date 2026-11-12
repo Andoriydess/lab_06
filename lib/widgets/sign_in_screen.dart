@@ -23,20 +23,14 @@ class _SignInScreenState extends State<SignInScreen> {
           SizedBox(
             width: 300,
           child: TextField(
-      decoration: const InputDecoration(
-      border: OutlineInputBorder(),
-      hintText: 'email',
-    ),
+      decoration: const InputDecoration(hintText: 'email',),
  ),
 ),
           SizedBox(height: 20,),
           SizedBox(
             width: 300,
             child: TextField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'password',
-              ),
+              decoration: const InputDecoration(hintText: 'password',),
             ),
           ),
           SizedBox(height: 20,),
@@ -44,7 +38,6 @@ class _SignInScreenState extends State<SignInScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey,foregroundColor: Colors.white),
               onPressed: () => {
                 showDialog(
                   context: context,
@@ -60,7 +53,6 @@ class _SignInScreenState extends State<SignInScreen> {
             ), //Login
             SizedBox(width:20),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey,foregroundColor: Colors.white),
               onPressed: () => {
                 Navigator.push(
                   context,
@@ -74,7 +66,6 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
           SizedBox(height: 20,),
           TextButton(
-            style: TextButton.styleFrom(overlayColor: Colors.grey),
             onPressed: () => {
               Navigator.push(
                   context,
